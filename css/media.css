@@ -1,0 +1,347 @@
+@media (max-width: 1658px) {
+    .aside__menu {
+        width: 92px;
+    }
+    .selected-tab {
+        width: 72.5px;
+    }
+    .row {
+        grid-template-columns: 84px 350px 72.5%;
+    }
+    .arrow-collapse {
+        margin-left: 340px;
+    }
+}
+
+@media (max-width: 1565px) {
+    .row {
+        grid-template-columns: 84px 350px 72%;
+    }
+    .arrow-collapse {
+        margin-left: 340px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .row {
+        grid-template-columns: 84px 350px 70%;
+    }
+}
+
+@media (max-width: 1390px) {
+    .row {
+        grid-template-columns: 84px 350px 68%;
+    }
+}
+
+@media (max-width: 1290px) {
+    .row {
+        grid-template-columns: 84px 350px 66%;
+    }
+}
+
+@media (max-width: 1260px) {
+    .tool__zoom {
+        right: 60px;
+    }
+    .row {
+        grid-template-columns: 84px 350px 65%;
+    }
+}
+
+@media (max-width: 1155px) {
+    .row {
+        grid-template-columns: 84px 350px 62%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .row {
+        grid-template-columns: 84px 350px 59.5%;
+    }
+}
+
+@media (max-width: 1065px) {
+    .element__tab {
+        width: 285px !important;
+    }
+    .instagram__stores-link img {
+        width: 126px;
+    }
+    .row {
+        grid-template-columns: 84px 300px 63.6%;
+    }
+    .arrow-collapse {
+        margin-left: 290px;
+    }
+    .instagram__story {
+        width: 288px;
+    }
+    .patterns__links {
+        padding-right: 8px;
+        padding-left: 5px;
+    }
+    .text__link {
+        margin-bottom: 30px;
+    }
+    .chart__links {
+        padding-right: 6px;
+    }
+    #pills-photo,
+    #pills-font {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 1011px) {
+    .row {
+        grid-template-columns: 84px 300px 61.6%;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav__menu {
+        display: none !important;
+    }
+    .selected-tab {
+        max-width: 85px;
+        width: 100%;
+    }
+    .form-control {
+        width: 175px;
+    }
+    .link__back {
+        margin-left: 0;
+    }
+    .link__forward {
+        margin-left: 0;
+    }
+    .share__menu {
+        top: 85%;
+    }
+    .dropdown__link:hover {
+        background: rgba(229, 229, 234, .86) !important;
+        border-radius: 6px !important;
+    }
+}
+
+@media (max-width: 980px) {
+    .aside__menu {
+        max-width: 90px;
+        width: 100%;
+    }
+    .selected-tab {
+        max-width: 79px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 976px) {
+    .row {
+        grid-template-columns: 84px 300px 60.6%;
+    }
+}
+
+@media (max-width: 951px) {
+    .row {
+        grid-template-columns: 84px 300px 59.6%;
+    }
+}
+
+@media (max-width: 926px) {
+    .row {
+        grid-template-columns: 84px 300px 58%;
+    }
+}
+
+
+/* @media (min-width:905px) {
+    .row {
+        grid-template-columns: 84px 355px 74%;
+    }
+} */
+
+@media (max-width: 905px) {
+    .row {
+        display: grid;
+        grid-template-areas: 'nav nav' 'aside content';
+        grid-template-columns: 300px 67%;
+        grid-template-rows: 75px;
+    }
+    .selected-tab {
+        transform: translateY(0px);
+    }
+    .aside__menu {
+        display: grid;
+        grid-area: nav;
+        max-width: 915px;
+        width: 100%;
+        height: 71px;
+    }
+    .main__menu {
+        display: grid;
+        grid-area: aside;
+    }
+    .right__menu {
+        display: grid;
+        grid-area: content;
+        padding-left: 75px;
+    }
+    .nav {
+        height: 71px;
+    }
+    .icon__links {
+        flex-direction: row !important;
+        width: 20%;
+        margin-top: -65px;
+        margin-left: 80%;
+        padding-top: 0;
+        padding-right: 0;
+    }
+    .icon__link {
+        margin-bottom: 0;
+    }
+    .icon__link:nth-of-type(2) {
+        margin-bottom: 0;
+    }
+    .arrow-collapse {
+        display: none;
+    }
+    .instagram__story {
+        width: 284px;
+    }
+    .tool__zoom {
+        right: 20px;
+        bottom: 0px;
+    }
+}
+
+@media (max-width: 785px) {
+    .row {
+        grid-template-rows: 130px;
+    }
+    .aside__menu {
+        height: 120px;
+    }
+    .icon__links {
+        margin-top: 0;
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 680px) {
+    .white__list {
+        width: 250px;
+        margin-right: 30px;
+    }
+    .right__menu {
+        padding-left: 45px;
+        padding-top: 0;
+    }
+    .tool__zoom {
+        right: 170px;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 580px) {
+    .tool__zoom {
+        right: 120px;
+    }
+    .navbar-toggler {
+        margin-right: -40px;
+    }
+}
+
+@media (max-width: 566px) {
+    .navbar-toggler {
+        margin-right: -105px;
+    }
+}
+
+@media (max-width: 521px) {
+    .row {
+        grid-template-areas: 'nav nav' 'aside aside' 'content content';
+        grid-template-columns: 385px;
+    }
+    .selected-tab {
+        max-width: 65px;
+        width: 100%;
+    }
+    .instagram__story {
+        width: 520px;
+    }
+    .element__tab {
+        width: 550px !important;
+    }
+    .right__menu {
+        padding-left: 130px;
+        padding-top: 30px;
+    }
+    .white__list {
+        width: 350px;
+    }
+    .tool__zoom {
+        right: 9px;
+    }
+    .images {
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+    .nav-pills .nav-link {
+        width: 67px;
+    }
+    .aside__menu {
+        width: 100%;
+    }
+    .navbar-toggler {
+        margin-right: -40px;
+    }
+}
+
+@media (max-width: 495px) {
+    .navbar-toggler {
+        margin-right: -90px;
+    }
+    .nav__menu.active {
+        right: 5px;
+    }
+}
+
+@media (max-width: 450px) {
+    .navbar-toggler {
+        margin-right: -145px;
+    }
+    .nav__menu.active {
+        right: -50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar-toggler {
+        margin-right: -185px;
+    }
+    .nav__menu.active {
+        right: -90px;
+    }
+}
+
+@media (max-width: 370px) {
+    .navbar-toggler {
+        margin-right: -220px;
+    }
+    .nav__menu.active {
+        right: -123px;
+    }
+}
+
+@media (max-width: 330px) {
+    .navbar-toggler {
+        margin-right: -250px;
+    }
+    .nav__menu.active {
+        right: -155px;
+    }
+}

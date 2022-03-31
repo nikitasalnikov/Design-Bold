@@ -1,0 +1,2727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/iconstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="images/logo_small.svg" alt=""
+        /></a>
+        <button class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="nav__menu navbar-collapse d-flex justify-content-between align-items-center"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown__link" href="#">
+                File <i class="far fa-chevron-down"></i>
+              </a>
+              <ul class="dropdown__menu">
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#shareModal"
+                    >Share</a
+                  >
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#newDesignModal"
+                    >New Design +</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#makeCopyModal"
+                    >Make a copy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#resizeModal"
+                    >Resize</a
+                  >
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li class="nav-item version__item">
+                  <a class="dropdown-item" href="#"
+                    >Version history <i class="fal fa-chevron-right"></i
+                  ></a>
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a
+                        href="#"
+                        class="dropdown-item"
+                        data-bs-toggle="modal"
+                        data-bs-target="#createVersionModal"
+                        >Create a version</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Manage versions</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moveToTrashModal"
+                    >Move to trash</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#designInformationModal"
+                    >Design information</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#goToWorkspaceModal"
+                    >Go to workspace</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <form class="d-flex position-relative">
+                <input
+                  class="form-control me-2"
+                  type="text"
+                  placeholder="Trial Instagram Story Design"
+                  aria-label="Search"
+                />
+                <span class="form__dots">...</span>
+                <button class="input__btn position-absolute" type="submit">
+                  <i class="fal fa-check"></i>
+                </button>
+              </form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link save active" aria-current="page" href="#"
+                ><i class="fal fa-save"></i>Save</a
+              >
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="dropdown-item nav-link recize"
+                data-bs-toggle="modal"
+                data-bs-target="#resizeModal"
+              >
+                <i class="fal fa-magic"></i>Resize
+              </button>
+            </li>
+            <li class="nav-item">
+              <a class="link__back" href="#"><i class="fal fa-undo"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="link__forward" href="#"><i class="fal fa-redo"></i></a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item item__dropdown">
+              <a class="nav-link share__link" href="# "
+                ><i class="fal fa-share-alt"></i>Share<i
+                  class="fa fa-angle-down"
+                ></i
+              ></a>
+              <ul class="share__menu">
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item share__item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#shareModal"
+                  >
+                    <i class="fal fa-user"></i>Invite people to view/edit
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item share__item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#shareModal"
+                  >
+                    <i class="fal fa-share-square"></i> Share to social media
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item share__item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#publishModal"
+                  >
+                    <i class="fal fa-globe"></i> Publish as a webpage
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="dropdown-item nav-link download__link"
+                data-bs-toggle="modal"
+                data-bs-target="#downloadModal"
+              >
+                <i class="far fa-download"></i>Download
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Share Modal -->
+    <!-- <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+        <div class="modal-dialog mv650">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <ul class="nav nav-pills mb-3 charts__nav w-100" id="favorite-tab" role="tablist">
+                        <li class="nav-item w-50 d-flex justify-content-center align-items-center" role="presentation">
+                            <button class=" active chart__link" id="pills-sharePeople-tab" data-bs-toggle="pill" data-bs-target="#pills-sharePeople" type="button" role="tab" aria-controls="pills-sharePeople" aria-selected="true">Share with people</button>
+                        </li>
+                        <li class="nav-item w-50 d-flex justify-content-center align-items-center" role="presentation">
+                            <button class=" chart__link" id="pills-shareSocials-tab" data-bs-toggle="pill" data-bs-target="#pills-shareSocials" type="button" role="tab" aria-controls="pills-shareSocials" aria-selected="false">Share with socials</button>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body share__modal-body">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-sharePeople" role="tabpanel" aria-labelledby="pills-sharePeople-tab">
+                            <p class="font-semi mb-2">
+                                <span class="db-text">Link to share </span>
+                            </p>
+                            <div class="ms-link-input">
+                                <input type="text" class="db-input" value="https://www.designbold.com/design/edit/z89eqg1V9j" readonly="">
+                                <div class="copy" data-id="share-link-copy">
+                                    <span class="db-text">Copy</span>
+                                </div>
+                            </div>
+                            <p class="font-semi mb-2 my-4">
+                                <span class="db-text">Who has access </span>
+                            </p>
+
+                            <div class="d-flex justify-content-between access">
+                                <div class="access__left col-6">
+                                    <div class="who-left" data-target="privacy-message">
+                                        <div class="icon">
+                                            <div class="role-icon"><i class="fal fa-user-friends"></i></div>
+                                        </div>
+                                        <div class="des">
+                                            <div>
+                                                <p><span class="db-text">Private - Only you can access</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="access__right col-6">
+                                    <div class="pt-1">
+                                        <a href="javascript:" class="text-primary" data-action="change-privacy">
+                                            <span class="db-text">Change</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="font-semi mb-2 my-4">
+                                <span class="db-text">Invite people:</span>
+                            </p>
+                            <div class="input-wrap d-flex align-items-center">
+                                <input type="text" id="invite-member-input" name="q" placeholder="Enter email addresses or their names on DesignBold">
+
+                                <a href="javascript:" class="edit__primary" data-permission="edit" data-toggle="permission-context" data-target="invite">
+                                    <span class="db-text">Can edit
+                                            <i class="fa fa-caret-down ml-1"></i>
+                                        </span>
+                                </a>
+                            </div>
+                            <button type="button" class="btn__done">Done</button>
+                        </div>
+                        <div class="tab-pane fade" id="pills-shareSocials" role="tabpanel" aria-labelledby="pills-shareSocials-tab">
+                            <div class="social__btns d-flex align-items-center">
+                                <a href="#" class="facebook__btn"><i class="fab fa-facebook-f"></i>Connect Facebook Pages</a>
+                                <a href="@" class="twitter__btn"><i class="fab fa-twitter"></i>Connect Twitter</a>
+                            </div>
+                            <div class="my-3">
+                                <p class="font-semi mb-2">
+                                    <span class="db-text">Message</span>
+                                </p>
+                                <textarea class="db-area" name="caption" data-edited="false" rows="3" placeholder="Say something about your design..."></textarea>
+                            </div>
+                            <label class="mb-0">
+                                <input type="checkbox" checked="" name="public-web">
+                                <span class="db-text">Public on the web </span>
+                            </label>
+                            <p class="size-12">
+                                <span class="db-text">Anyone on the Internet can find and  </span>
+                                <a href="javascript:" class="text__primary" data-toggle="permission-context" data-target="social" data-permission="clone">
+                                    <span class="db-text">Can copy
+                                        <i class="fa fa-caret-down ml-1"></i>
+                                    </span>
+                                </a>
+                            </p>
+                            <div class="mb-control text-center">
+                                <a href="javascript:" class="db-btn min120 disabled" data-extension="png" data-action="share"><span class="db-text">Share Now</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+
+    <!--New Design + Modal -->
+    <!-- <div class="modal fade" id="newDesignModal" tabindex="-1" aria-labelledby="newDesignModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newDesignModalLabel">newDesignModalLabel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--Make a copy Modal -->
+    <!-- <div class="modal fade" id="makeCopyModal" tabindex="-1" aria-labelledby="makeCopyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="makeCopyModalLabel">Make a copy Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--Resize Modal -->
+    <!-- <div class="modal fade" id="resizeModal" tabindex="-1" aria-labelledby="resizeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resizeModalLabel">Resize Modal </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--Create a Version Modal -->
+    <!-- <div class="modal fade" id="createVersionModal" tabindex="-1" aria-labelledby="createVersionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createVersionModalLabel">Create a Version Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--Move to trash Modal -->
+    <!-- <div class="modal fade" id="moveToTrashModal" tabindex="-1" aria-labelledby="moveToTrashModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="moveToTrashModalLabel">Move to trash Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--Design information Modal -->
+    <!-- <div class="modal fade" id="designInformationModal" tabindex="-1" aria-labelledby="designInformationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="designInformationModalLabel">Design information Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--Go to workspace Modal -->
+    <!-- <div class="modal fade" id="goToWorkspaceModal" tabindex="-1" aria-labelledby="goToWorkspaceModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="goToWorkspaceModalLabel">Go to workspace Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--Publish Modal -->
+    <!-- <div class="modal fade" id="publishModal" tabindex="-1" aria-labelledby="publishModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="publishModalLabel">Publish Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--Download Modal -->
+    <!-- <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="downloadModalLabel">Download Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--Main-->
+    <main class="main">
+      <div class="row">
+        <div class="col col-lg-2 aside__menu">
+          <div class="d-flex align-items-start aside__menu-pills">
+            <div
+              class="nav flex-column nav-pills me-3"
+              id="v-pills-tab"
+              role="tablist"
+              aria-orientation="vertical"
+            >
+              <span class="selected-tab"></span>
+              <button
+                class="nav-link aside__menu-link1 active d-flex flex-column align-items-center justify-content-center"
+                id="v-pills-element-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-element"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-element"
+                aria-selected="true"
+              >
+                <i class="fal fa-cube"></i>Element
+              </button>
+              <button
+                class="nav-link aside__menu-link2 d-flex flex-column align-items-center justify-content-center"
+                id="v-pills-template-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-template"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-template"
+                aria-selected="false"
+              >
+                <i class="icon-template"></i>Template
+              </button>
+              <button
+                class="nav-link aside__menu-link3 d-flex flex-column align-items-center justify-content-center"
+                id="v-pills-bground-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-bground"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-bground"
+                aria-selected="false"
+              >
+                <i class="icon-bground"></i> BGround
+              </button>
+              <button
+                class="nav-link aside__menu-link4 d-flex flex-column align-items-center justify-content-center"
+                id="v-pills-text-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-text"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-text"
+                aria-selected="false"
+              >
+                <i class="fal fa-font"></i>Text
+              </button>
+              <button
+                class="nav-link aside__menu-link5 d-flex flex-column align-items-center justify-content-center"
+                id="v-pills-tool-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-tool"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-tool"
+                aria-selected="false"
+              >
+                <i class="fal fa-wrench"></i>Tool
+              </button>
+              <button
+                class="nav-link aside__menu-link6 d-flex flex-column align-items-center justify-content-center"
+                id="v-pills-upload-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-upload"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-upload"
+                aria-selected="false"
+              >
+                <i class="fal fa-cloud-upload"></i>Upload
+              </button>
+              <button
+                class="nav-link aside__menu-link7 d-flex flex-column align-items-center justify-content-center"
+                id="v-pills-favorites-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-favorites"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-favorites"
+                aria-selected="false"
+              >
+                <i class="fal fa-star"></i>Favorites
+              </button>
+              <button
+                class="nav-link aside__menu-link8 d-flex flex-column align-items-center justify-content-center"
+                id="v-pills-contentKits-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-contentKits"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-contentKits"
+                aria-selected="false"
+              >
+                <i class="fal fa-pencil-paintbrush"></i>Content Kits
+              </button>
+            </div>
+          </div>
+          <div
+            class="d-flex flex-column align-items-center justify-content-between icon__links"
+          >
+            <a href="#" class="icon__link switch__theme d-flex"
+              ><i class="icon-sun"></i><i class="fal fa-moon"></i
+            ></a>
+            <a
+              href="#"
+              class="icon__link"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              ><i class="fal fa-info-circle"></i
+            ></a>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div
+                      id="carouselExampleCaptions"
+                      class="carousel slide"
+                      data-bs-ride="carousel"
+                    >
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img
+                            src="images/choose-template.png"
+                            class="d-block w-100"
+                            alt="..."
+                          />
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Choose a Template</h5>
+                            <p>
+                              Simply go to the Template tab on the left bar and
+                              you can choose any from our
+                              professionally-designed templates. Drag it from
+                              the side bar onto the page and you are good to go!
+                            </p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="images/resize-image.png"
+                            class="d-block w-100"
+                            alt="..."
+                          />
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Resize Image</h5>
+                            <p>
+                              One-click any image or element and you’re free to
+                              resize Try our easy-to-use cropping tools to crop
+                              any photo to balance your design or beautifully
+                              reframe your photo
+                            </p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="images/rotate-image.png"
+                            class="d-block w-100"
+                            alt="..."
+                          />
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Rotate Image</h5>
+                            <p>
+                              Try our easy-to-use rotating tools to straighten
+                              your photos or to keep your designs sharp and
+                              correct any camera mistakes.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="images/add-text.png"
+                            class="d-block w-100"
+                            alt="..."
+                          />
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Add Text</h5>
+                            <p>
+                              Add Text to Any Photo for a Quick Caption or
+                              Compelling Commentary by simply pressing “T” or go
+                              to the Text tab on the left bar to explore our
+                              library of stylish textholders.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/chose-font.png" alt="..." />
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Rotate Image</h5>
+                            <p>
+                              Try our easy-to-use rotating tools to straighten
+                              your photos or to keep your designs sharp and
+                              correct any camera mistakes.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/save-design.png" alt="..." />
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Save My Design</h5>
+                            <p>
+                              As you design and edit your works on DesignBold,
+                              the changes you make are automatically saved every
+                              few seconds.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/dowload-share.png" alt="..." />
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Download & Share My Design</h5>
+                            <p>
+                              Save your design to Dropbox to access it anywhere
+                              you want. Or easily download it in glorious high
+                              resolution for large print or web-use in JPEG, PNG
+                              or PDF. Share your design on social media channels
+                              with just one-click.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/design-bolds.png" alt="..." />
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>DesignBold’s Shortcuts</h5>
+                            <p>
+                              Speed up the design process and expand your skills
+                              with easy and convenient keyboard shortcuts.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-indicators">
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide-to="0"
+                          class="dot active"
+                          aria-current="true"
+                          aria-label="Slide 1"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide-to="1"
+                          class="dot"
+                          aria-label="Slide 2"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide-to="2"
+                          class="dot"
+                          aria-label="Slide 3"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide-to="3"
+                          class="dot"
+                          aria-label="Slide 4"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide-to="4"
+                          class="dot"
+                          aria-label="Slide 5"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide-to="5"
+                          class="dot"
+                          aria-label="Slide 6"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide-to="6"
+                          class="dot"
+                          aria-label="Slide 7"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide-to="7"
+                          class="dot"
+                          aria-label="Slide 8"
+                        ></button>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev"
+                  >
+                    <i class="fal fa-chevron-left"></i>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next"
+                  >
+                    <i class="fal fa-chevron-right icon__right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="icon__link"><i class="fal fa-comments"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 main__menu">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-element"
+              role="tabpanel"
+              aria-labelledby="v-pills-element-tab"
+            >
+              <div class="element__tab">
+                <div class="input-group mb-3 element__form position-relative">
+                  <span class="input-group-text" id="basic-addon1"
+                    ><i class="fal fa-search"></i
+                  ></span>
+                  <input
+                    type="search"
+                    class="form-control element__search"
+                    placeholder="Search elements"
+                    aria-label="Username"
+                    aria-describedby="basic-addon1"
+                  />
+                </div>
+                <div class="grids">
+                  <div
+                    class="element__text w-100 d-flex justify-content-between align-items-center"
+                  >
+                    <h5>Grids</h5>
+                    <span class="border__separate"></span>
+                    <div
+                      class="all__links d-flex justify-content-between align-items-center"
+                    >
+                      <a href="#" class="element__link d-block">All</a>
+                      <i
+                        class="fal fa-chevron-right all__link-icon d-block"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="images d-flex justify-content-between align-items-center"
+                >
+                  <a href="#" class="placeholder">
+                    <img src="images/placeholder.jpg" alt="" />
+                  </a>
+
+                  <a href="#" class="d-flex border__hover">
+                    <img
+                      class="placeholder__col8"
+                      src="images/placeholder.jpg"
+                      alt=""
+                    />
+                    <img
+                      class="placeholder__col4"
+                      src="images/placeholder.jpg"
+                      alt=""
+                    />
+                  </a>
+
+                  <a href="#" class="d-flex grids__col6">
+                    <img
+                      class="placeholder__col6"
+                      src="images/placeholder.jpg"
+                      alt=""
+                    />
+                    <img
+                      class="placeholder__col6-last"
+                      src="images/placeholder.jpg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="grids">
+                  <div
+                    class="element__text w-100 d-flex justify-content-between align-items-center"
+                  >
+                    <h5>Free photos</h5>
+                    <span class="border__separate free__photos"></span>
+                    <div
+                      class="all__links d-flex justify-content-between align-items-center"
+                    >
+                      <a href="#" class="element__link d-block">All</a>
+                      <i
+                        class="fal fa-chevron-right all__link-icon d-block"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center images"
+                >
+                  <a href="#" class="free__photo-link position-relative">
+                    <img src="images/free-photos.jpg" alt="" />
+                    <div class="add__favorites">
+                      <span class="star fal"></span>
+                      <span class="info fas"></span>
+                    </div>
+                  </a>
+
+                  <a href="#" class="free__photo-link2 position-relative">
+                    <img src="images/free-photos1.jpg" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+
+                  <a href="#" class="free__photo-link3 position-relative">
+                    <img src="images/free-photos2.jpg" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                </div>
+                <div class="grids">
+                  <div
+                    class="element__text w-100 d-flex justify-content-between align-items-center"
+                  >
+                    <h5>DB Premium</h5>
+                    <span class="border__separate db__premium"></span>
+                    <div
+                      class="all__links d-flex justify-content-between align-items-center"
+                    >
+                      <a href="#" class="element__link d-block">All</a>
+                      <i
+                        class="fal fa-chevron-right all__link-icon d-block"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center images"
+                >
+                  <a href="#" class="db__photo-link position-relative">
+                    <img
+                      class="db__premium-img1"
+                      src="images/db-premium1.jpg"
+                      alt=""
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="db__photo-link2 position-relative">
+                    <img
+                      class="db__premium-img2"
+                      src="images/db-premium2.jpg"
+                      alt=""
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="db__photo-link3 position-relative">
+                    <img
+                      class="db__premium-img3"
+                      src="images/db-premium3.jpg"
+                      alt=""
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                </div>
+                <div class="grids">
+                  <div
+                    class="element__text w-100 d-flex justify-content-between align-items-center"
+                  >
+                    <h5>Shapes</h5>
+                    <span class="border__separate"></span>
+                    <div
+                      class="all__links d-flex justify-content-between align-items-center"
+                    >
+                      <a href="#" class="element__link d-block">All</a>
+                      <i
+                        class="fal fa-chevron-right all__link-icon d-block"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center images"
+                >
+                  <a href="#" class="shapes__link position-relative">
+                    <img class="shapes-img1" src="images/shapes1.webp" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="shapes__link2 position-relative">
+                    <img class="shapes-img2" src="images/shapes2.webp" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="shapes__link3 position-relative">
+                    <img class="shapes-img3" src="images/shapes3.webp" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                </div>
+                <div class="grids">
+                  <div
+                    class="element__text w-100 d-flex justify-content-between align-items-center"
+                  >
+                    <h5>Lines</h5>
+                    <span class="border__separate"></span>
+                    <div
+                      class="all__links d-flex justify-content-between align-items-center"
+                    >
+                      <a href="#" class="element__link d-block">All</a>
+                      <i
+                        class="fal fa-chevron-right all__link-icon d-block"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="images d-flex justify-content-between align-items-center flex-column"
+                >
+                  <a href="#" class="lines__link position-relative">
+                    <img class="lines-img1" src="images/lines1.webp" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="lines__link position-relative">
+                    <img class="lines-img2" src="images/lines2.webp" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="lines__link position-relative">
+                    <img class="lines-img3" src="images/lines3.webp" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                </div>
+                <div class="grids">
+                  <div
+                    class="element__text w-100 d-flex justify-content-between align-items-center"
+                  >
+                    <h5>Frames</h5>
+                    <span class="border__separate"></span>
+                    <div
+                      class="all__links d-flex justify-content-between align-items-center"
+                    >
+                      <a href="#" class="element__link d-block">All</a>
+                      <i
+                        class="fal fa-chevron-right all__link-icon d-block"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center images"
+                >
+                  <a href="#" class="frames__link position-relative">
+                    <img class="frames-img1" src="images/frames1.webp" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="frames__link2 position-relative">
+                    <img class="frames-img2" src="images/frames2.webp" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="frames__link3 position-relative">
+                    <img class="frames-img3" src="images/frames3.webp" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                </div>
+                <div class="grids">
+                  <div
+                    class="element__text w-100 d-flex justify-content-between align-items-center"
+                  >
+                    <h5>Icons</h5>
+                    <span class="border__separate"></span>
+                    <div
+                      class="all__links d-flex justify-content-between align-items-center"
+                    >
+                      <a href="#" class="element__link d-block">All</a>
+                      <i
+                        class="fal fa-chevron-right all__link-icon d-block"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between images">
+                  <a href="#" class="icon__link-img position-relative">
+                    <img class="icons-img1" src="images/icons1.webp" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="icon__link-img position-relative">
+                    <img class="icons-img2" src="images/icons2.webp" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="icon__link-img position-relative">
+                    <img class="icons-img3" src="images/icons3.webp" alt="" />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-template"
+              role="tabpanel"
+              aria-labelledby="v-pills-template-tab"
+            >
+              <div class="element__tab">
+                <div class="input-group mb-3 element__form position-relative">
+                  <span class="input-group-text" id="basic-addon2"
+                    ><i class="fal fa-search"></i
+                  ></span>
+                  <input
+                    type="search"
+                    class="form-control element__search"
+                    placeholder="Search templates"
+                    aria-label="Username"
+                    aria-describedby="basic-addon2"
+                  />
+                </div>
+                <div class="position-relative">
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Instagram Story</option>
+                    <option value="1">My designs</option>
+                    <option value="2">Shared with me</option>
+                    <option value="3">Trending</option>
+                  </select>
+
+                  <i class="fas fa-sort-down position-absolute"></i>
+                </div>
+
+                <div class="instagram__stores-links">
+                  <a href="#" class="instagram__stores-link position-relative">
+                    <img src="images/instagram__story1.webp" alt="" />
+                    <span class="fas instagram__icon"></span>
+                  </a>
+                  <a href="#" class="instagram__stores-link position-relative">
+                    <img src="images/instagram__story2.webp" alt="" />
+                    <span class="fas instagram__icon"></span>
+                  </a>
+                  <a href="#" class="instagram__stores-link position-relative">
+                    <img src="images/instagram__story3.webp" alt="" />
+                    <span class="fas instagram__icon"></span>
+                  </a>
+                  <a href="#" class="instagram__stores-link position-relative">
+                    <img src="images/instagram__story4.webp" alt="" />
+                    <span class="fas instagram__icon"></span>
+                  </a>
+                  <a href="#" class="instagram__stores-link position-relative">
+                    <img src="images/instagram__story5.webp" alt="" />
+                    <span class="fas instagram__icon"></span>
+                  </a>
+                  <a href="#" class="instagram__stores-link position-relative">
+                    <img src="images/instagram__story6.webp" alt="" />
+                    <span class="fas instagram__icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-bground"
+              role="tabpanel"
+              aria-labelledby="v-pills-bground-tab"
+            >
+              <div class="element__tab">
+                <div
+                  class="element__text color__block w-100 d-flex justify-content-between align-items-center"
+                >
+                  <h5>Color block</h5>
+                  <span class="border__separate color__separate"></span>
+                </div>
+                <div class="design__colors">
+                  <h5>Design colors</h5>
+                  <div class="colors d-flex">
+                    <div class="color__white"></div>
+                    <div class="color__black"></div>
+                  </div>
+                </div>
+                <div class="design__colors color__palettes">
+                  <h5>User color palettes</h5>
+                  <div class="colors d-flex">
+                    <div class="color__white"></div>
+                    <div class="color__black"></div>
+                  </div>
+                </div>
+                <a class="color__pick d-flex align-items-center">
+                  <i class="fal fa-eye-dropper"></i> Pick a color
+                </a>
+                <div
+                  class="element__text patterns w-100 d-flex justify-content-between align-items-center"
+                >
+                  <h5>Patterns</h5>
+                  <span class="border__separate patterns__separate"></span>
+                </div>
+                <div
+                  class="patterns__links d-flex w-100 justify-content-between align-items-center flex-wrap"
+                >
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns1.png"
+                      class="pattern__images1"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns2.png"
+                      class="pattern__images2"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns3.png"
+                      class="pattern__images3"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns4.png"
+                      class="pattern__images4"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns5.png"
+                      class="pattern__images5"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns6.png"
+                      class="pattern__images6"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns7.png"
+                      class="pattern__images7"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns8.png"
+                      class="pattern__images8"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns9.png"
+                      class="pattern__images9"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns10.png"
+                      class="pattern__images10"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns11.png"
+                      class="pattern__images11"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns12.png"
+                      class="pattern__images12"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns13.png"
+                      class="pattern__images13"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns14.png"
+                      class="pattern__images14"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns15.png"
+                      class="pattern__images15"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns16.png"
+                      class="pattern__images16"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns17.png"
+                      class="pattern__images17"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                  <a href="#" class="pattern__link position-relative">
+                    <img
+                      src="images/patterns18.png"
+                      class="pattern__images18"
+                      alt="pattern__images"
+                    />
+                    <span class="star fal"></span>
+                    <span class="info fas"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-text"
+              role="tabpanel"
+              aria-labelledby="v-pills-text-tab"
+            >
+              <div class="element__tab">
+                <div class="input-group mb-3 element__form position-relative">
+                  <span class="input-group-text" id="basic-addon3"
+                    ><i class="fal fa-search"></i
+                  ></span>
+                  <input
+                    type="search"
+                    class="form-control element__search"
+                    placeholder="Search texts"
+                    aria-label="Username"
+                    aria-describedby="basic-addon3"
+                  />
+                </div>
+                <div class="text__fonts">
+                  <h3>Add heading</h3>
+                  <h4>Add Subheading</h4>
+                  <h5>Add body text</h5>
+                </div>
+                <div
+                  class="element__text beta w-100 d-flex justify-content-between align-items-center"
+                >
+                  <h5>Beta</h5>
+                  <span class="border__separate beta__separate"></span>
+                </div>
+                <div
+                  class="patterns__links d-flex w-100 justify-content-between align-items-center flex-wrap"
+                >
+                  <a href="#" class="text__link position-relative">
+                    <img
+                      src="images/text-img1.png"
+                      class="text__images1 position-relative"
+                      alt="pattern__images"
+                    />
+                    <span class="star text__star1 position-absolute fal"></span>
+                    <span class="info info__star1 position-absolute fas"></span>
+                  </a>
+                  <a href="#" class="text__link position-relative">
+                    <img
+                      src="images/text-img2.png"
+                      class="text__images2 position-relative"
+                      alt="pattern__images"
+                    />
+                    <span class="star text__star2 position-absolute fal"></span>
+                    <span class="info info__star2 position-absolute fas"></span>
+                  </a>
+                  <a href="#" class="text__link position-relative">
+                    <img
+                      src="images/text-img3.png"
+                      class="text__images3"
+                      alt="pattern__images"
+                    />
+                    <span class="star text__star3 position-absolute fal"></span>
+                    <span class="info info__star3 position-absolute fas"></span>
+                  </a>
+                  <a href="#" class="text__link position-relative">
+                    <img
+                      src="images/text-img4.png"
+                      class="text__images4 position-relative"
+                      alt="pattern__images"
+                    />
+                    <span class="star text__star4 fal"></span>
+                    <span class="info info__star4 fas"></span>
+                  </a>
+                  <a href="#" class="text__link position-relative">
+                    <img
+                      src="images/text-img5.png"
+                      class="text__images5"
+                      alt="pattern__images"
+                    />
+                    <span class="star text__star5 position-absolute fal"></span>
+                    <span class="info info__star5 position-absolute fas"></span>
+                  </a>
+                  <a href="#" class="text__link position-relative">
+                    <img
+                      src="images/text-img6.png"
+                      class="text__images6"
+                      alt="pattern__images"
+                    />
+                    <span class="star text__star6 position-absolute fal"></span>
+                    <span class="info info__star6 position-absolute fas"></span>
+                  </a>
+                  <a href="#" class="text__link position-relative">
+                    <img
+                      src="images/text-img7.png"
+                      class="text__images7"
+                      alt="pattern__images"
+                    />
+                    <span class="star text__star7 position-absolute fal"></span>
+                    <span class="info info__star7 position-absolute fas"></span>
+                  </a>
+                  <a href="#" class="text__link position-relative">
+                    <img
+                      src="images/text-img8.png"
+                      class="text__images8"
+                      alt="pattern__images"
+                    />
+                    <span class="star text__star8 position-absolute fal"></span>
+                    <span class="info info__star8 position-absolute fas"></span>
+                  </a>
+                  <a href="#" class="text__link position-relative">
+                    <img
+                      src="images/text-img9.png"
+                      class="text__images9"
+                      alt="pattern__images"
+                    />
+                    <span class="star text__star9 position-absolute fal"></span>
+                    <span class="info info__star9 position-absolute fas"></span>
+                  </a>
+                  <a href="#" class="text__link position-relative">
+                    <img
+                      src="images/text-img10.png"
+                      class="text__images10"
+                      alt="pattern__images"
+                    />
+                    <span
+                      class="star text__star10 position-absolute fal"
+                    ></span>
+                    <span
+                      class="info info__star10 position-absolute fas"
+                    ></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-tool"
+              role="tabpanel"
+              aria-labelledby="v-pills-tool-tab"
+            >
+              <ul
+                class="nav nav-pills mb-3 charts__nav"
+                id="pills-tab"
+                role="tablist"
+              >
+                <li
+                  class="nav-item w-50 d-flex justify-content-center align-items-center"
+                  role="presentation"
+                >
+                  <button
+                    class="active chart__link"
+                    id="pills-home-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-home"
+                    aria-selected="true"
+                  >
+                    Charts
+                  </button>
+                </li>
+                <li
+                  class="nav-item w-50 d-flex justify-content-center align-items-center"
+                  role="presentation"
+                >
+                  <button
+                    class="chart__link"
+                    id="pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-profile"
+                    aria-selected="false"
+                  >
+                    Maps
+                  </button>
+                </li>
+              </ul>
+              <div class="element__tab">
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="pills-home"
+                    role="tabpanel"
+                    aria-labelledby="pills-home-tab"
+                  >
+                    <div
+                      class="chart__links d-flex w-100 justify-content-between align-items-center flex-wrap"
+                    >
+                      <a
+                        href="#"
+                        class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                      >
+                        <img
+                          src="images/charts1.png"
+                          class="chart__images1"
+                          alt="pattern__images"
+                        />
+                        <h3>vertical bar</h3>
+                      </a>
+                      <a
+                        href="#"
+                        class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                      >
+                        <img
+                          src="images/charts2.png"
+                          class="chart__images2"
+                          alt="pattern__images"
+                        />
+                        <h3>triangle bar</h3>
+                      </a>
+                      <a
+                        href="#"
+                        class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                      >
+                        <img
+                          src="images/charts3.png"
+                          class="chart__images3"
+                          alt="pattern__images"
+                        />
+                        <h3>Horizontal ...</h3>
+                      </a>
+                      <a
+                        href="#"
+                        class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                      >
+                        <img
+                          src="images/charts4.png"
+                          class="chart__images4"
+                          alt="pattern__images"
+                        />
+                        <h3>line</h3>
+                      </a>
+                      <a
+                        href="#"
+                        class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                      >
+                        <img
+                          src="images/charts5.png"
+                          class="chart__images5"
+                          alt="pattern__images"
+                        />
+                        <h3>Area</h3>
+                      </a>
+                      <a
+                        href="#"
+                        class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                      >
+                        <img
+                          src="images/charts6.png"
+                          class="chart__images6"
+                          alt="pattern__images"
+                        />
+                        <h3>Dot</h3>
+                      </a>
+                      <a
+                        href="#"
+                        class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                      >
+                        <img
+                          src="images/charts7.png"
+                          class="chart__images7"
+                          alt="pattern__images"
+                        />
+                        <h3>Pie</h3>
+                      </a>
+                      <a
+                        href="#"
+                        class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                      >
+                        <img
+                          src="images/charts8.png"
+                          class="chart__images8"
+                          alt="pattern__images"
+                        />
+                        <h3>Stacked v...</h3>
+                      </a>
+                      <a
+                        href="#"
+                        class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                      >
+                        <img
+                          src="images/charts9.png"
+                          class="chart__images9"
+                          alt="pattern__images"
+                        />
+                        <h3>Gradient H...</h3>
+                      </a>
+                      <a
+                        href="#"
+                        class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                      >
+                        <img
+                          src="images/charts10.png"
+                          class="chart__images10"
+                          alt="pattern__images"
+                        />
+                        <h3>Gauge</h3>
+                      </a>
+                      <a
+                        href="#"
+                        class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                      >
+                        <img
+                          src="images/charts11.png"
+                          class="chart__images11"
+                          alt="pattern__images"
+                        />
+                        <h3>Doughnut</h3>
+                      </a>
+                      <a
+                        href="#"
+                        class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                      >
+                        <img
+                          src="images/charts12.png"
+                          class="chart__images12"
+                          alt="pattern__images"
+                        />
+                        <h3>Swatch</h3>
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="pills-profile"
+                    role="tabpanel"
+                    aria-labelledby="pills-profile-tab"
+                  >
+                    <ul class="nav nav-pills mb-3" id="maps-tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="active region__link"
+                          id="pills-region-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#pills-region"
+                          type="button"
+                          role="tab"
+                          aria-controls="pills-region"
+                          aria-selected="true"
+                        >
+                          Region
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="region__link"
+                          id="pills-country-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#pills-country"
+                          type="button"
+                          role="tab"
+                          aria-controls="pills-country"
+                          aria-selected="false"
+                        >
+                          Country
+                        </button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContentMap">
+                      <div
+                        class="tab-pane fade show active"
+                        id="pills-region"
+                        role="tabpanel"
+                        aria-labelledby="pills-region-tab"
+                      >
+                        <div
+                          class="chart__links d-flex w-100 justify-content-between align-items-center flex-wrap"
+                        >
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/region1.svg"
+                              class="chart__images1 region__img"
+                              alt="chart__images"
+                            />
+                            <h3>World</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/region2.svg"
+                              class="chart__images2 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Africa</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/region3.svg"
+                              class="chart__images3 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Asia</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/region4.svg"
+                              class="chart__images4 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Europe</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/region5.svg"
+                              class="chart__images5 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Oceania</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/region6.svg"
+                              class="chart__images6 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>North Am...</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/region7.svg"
+                              class="chart__images7 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>South Ame...</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/region8.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Southeast ...</h3>
+                          </a>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="pills-country"
+                        role="tabpanel"
+                        aria-labelledby="pills-profile-tab"
+                      >
+                        <div
+                          class="input-group mb-3 element__form position-relative"
+                        >
+                          <span class="input-group-text" id="basic-addon4"
+                            ><i class="fal fa-search"></i
+                          ></span>
+                          <input
+                            type="search"
+                            class="form-control element__search"
+                            placeholder="Type country name"
+                            aria-label="Username"
+                            aria-describedby="basic-addon1"
+                          />
+                        </div>
+                        <div
+                          class="element__text color__block maps__block w-100 d-flex justify-content-between align-items-center"
+                        >
+                          <h5>A</h5>
+                          <span
+                            class="border__separate country__separate"
+                          ></span>
+                        </div>
+                        <div
+                          class="chart__links d-flex w-100 justify-content-between align-items-center flex-wrap"
+                        >
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/afganistan.svg"
+                              class="chart__images1 region__img"
+                              alt="chart__images"
+                            />
+                            <h3>Afghanistan</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/albania.svg"
+                              class="chart__images2 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Albania</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/algeria.svg"
+                              class="chart__images3 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Algeria</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/angola.svg"
+                              class="chart__images4 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Angola</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/andorra.svg"
+                              class="chart__images5 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Andorra</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/antigua.svg"
+                              class="chart__images6 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Antigua an...</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/anguilla.svg"
+                              class="chart__images7 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Anguilla</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/argentina.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Argentina</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/armenia.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Armenia</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/aruba.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Aruba</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/austria.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Austria</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/australia.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Australia</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/azerbaijan.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Azerbaijan</h3>
+                          </a>
+                        </div>
+                        <div
+                          class="element__text color__block maps__block w-100 d-flex justify-content-between align-items-center"
+                        >
+                          <h5>B</h5>
+                          <span
+                            class="border__separate country__separate"
+                          ></span>
+                        </div>
+                        <div
+                          class="chart__links d-flex w-100 justify-content-between align-items-center flex-wrap"
+                        >
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/bangladesh.svg"
+                              class="chart__images1 region__img"
+                              alt="chart__images"
+                            />
+                            <h3>Bangladesh</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/bahamas.svg"
+                              class="chart__images2 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Bahamas</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/barbados.svg"
+                              class="chart__images3 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Barbados</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/bahrein.svg"
+                              class="chart__images4 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Bahrain</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/belarus.svg"
+                              class="chart__images5 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Belarus</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/belgium.svg"
+                              class="chart__images6 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Belgium</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/benin.svg"
+                              class="chart__images7 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Benin</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/belize.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Belize</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/bermuda.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Bermuda</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/bhutan.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Bhutan</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/bolivia.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Bolivia</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/botswana.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Botswana</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/bosnia.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Bosnia an...</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/brazil.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Brazil</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/brunei.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Brunei</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/british-virgin.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>British Virg...</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/br-indian.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Br. Indian....</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/bulgaria.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Bulgaria</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/burundi.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Burundi</h3>
+                          </a>
+                          <a
+                            href="#"
+                            class="chart__link-img d-flex justify-content-center align-items-center position-relative"
+                          >
+                            <img
+                              src="images/burkina.svg"
+                              class="chart__images8 region__img"
+                              alt="pattern__images"
+                            />
+                            <h3>Burkina Fa...</h3>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-upload"
+              role="tabpanel"
+              aria-labelledby="v-pills-upload-tab"
+            >
+              <ul
+                class="nav nav-pills mb-3 charts__nav"
+                id="upload-tab"
+                role="tablist"
+              >
+                <li
+                  class="nav-item w-50 d-flex justify-content-center align-items-center"
+                  role="presentation"
+                >
+                  <button
+                    class="active chart__link"
+                    id="pills-photo-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-photo"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-photo"
+                    aria-selected="true"
+                  >
+                    Photo
+                  </button>
+                </li>
+                <li
+                  class="nav-item w-50 d-flex justify-content-center align-items-center"
+                  role="presentation"
+                >
+                  <button
+                    class="chart__link"
+                    id="pills-font-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-font"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-font"
+                    aria-selected="false"
+                  >
+                    Font
+                  </button>
+                </li>
+              </ul>
+              <div class="element__tab">
+                <div class="tab-content" id="pills-tabContentUpload">
+                  <div
+                    class="tab-pane fade show active"
+                    id="pills-photo"
+                    role="tabpanel"
+                    aria-labelledby="pills-photo-tab"
+                  >
+                    <ul
+                      class="nav nav-pills mb-3"
+                      id="photo-tab"
+                      role="tablist"
+                    >
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="active region__link"
+                          id="pills-personal-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#pills-personal"
+                          type="button"
+                          role="tab"
+                          aria-controls="pills-personal"
+                          aria-selected="true"
+                        >
+                          Personal
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="region__link"
+                          id="pills-facebook-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#pills-facebook"
+                          type="button"
+                          role="tab"
+                          aria-controls="pills-facebook"
+                          aria-selected="false"
+                        >
+                          Facebook
+                        </button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContentPhoto">
+                      <div
+                        class="tab-pane fade show active"
+                        id="pills-personal"
+                        role="tabpanel"
+                        aria-labelledby="pills-personal-tab"
+                      >
+                        <div
+                          class="uploaded d-flex justify-content-between align-items-center"
+                        >
+                          <span>Uploaded</span>
+                          <span><i>0MB</i>/2GB</span>
+                        </div>
+                        <a
+                          href="#"
+                          class="d-flex flex-column justify-content-center align-items-center text-decoration-none upload__photo-link"
+                        >
+                          <i class="fal fa-cloud-upload upload__icon"></i>
+                          <p>Drag files here or <span> browse</span></p>
+                          <div class="note">
+                            Maximum size:<span class="upload-limit-photo"
+                              >2</span
+                            >MB in JPG, PNG &amp;
+                            <span class="upload-limit-vector">2</span>MB in SVG,
+                            EPS
+                          </div>
+                        </a>
+                        <div
+                          class="uploaded d-flex justify-content-between align-items-center"
+                        >
+                          <a href="#" class="uploaded__file"
+                            ><i class="fas fa-folder"></i>My File</a
+                          >
+                          <div class="dropdown">
+                            <a
+                              class="dropdown__link sort__link d-flex align-items-center justify-content-center"
+                              href="#"
+                              role="button"
+                              id="dropdownMenuLink"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Sort <i class="fas fa-sort-down sort__icon"></i>
+                            </a>
+                            <ul
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuLink"
+                            >
+                              <li>
+                                <a class="dropdown-item" href="#">File type</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Date uploaded</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div
+                          class="add__folder d-flex flex-column justify-content-center"
+                        >
+                          <a href="#" class="add__folder-link"
+                            ><i class="fal fa-plus add__folder-icon"></i
+                          ></a>
+                          <p>Add folder</p>
+                        </div>
+
+                        <div class="no__media">
+                          <img src="images/no__media.svg" alt="" />
+                          <p>You haven't uploaded any item</p>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="pills-facebook"
+                        role="tabpanel"
+                        aria-labelledby="pills-facebook-tab"
+                      >
+                        ...
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="pills-font"
+                    role="tabpanel"
+                    aria-labelledby="pills-font-tab"
+                  >
+                    <div
+                      class="uploaded d-flex justify-content-between align-items-center"
+                    >
+                      <span>Fonts</span>
+                      <span><i>0/5</i></span>
+                    </div>
+                    <a
+                      href="#"
+                      class="d-flex flex-column justify-content-center align-items-center text-decoration-none upload__photo-link"
+                    >
+                      <i class="fal fa-cloud-upload upload__icon"></i>
+                      <p>Drag files here or <span> browse</span></p>
+                      <div class="note">
+                        Maximum size:<span class="upload-limit-font">30</span>MB
+                        in OTF, TTF, WOFF
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-favorites"
+              role="tabpanel"
+              aria-labelledby="v-pills-favorites-tab"
+            >
+              <ul
+                class="nav nav-pills mb-3 charts__nav"
+                id="favorite-tab"
+                role="tablist"
+              >
+                <li
+                  class="nav-item w-50 d-flex justify-content-center align-items-center"
+                  role="presentation"
+                >
+                  <button
+                    class="active chart__link"
+                    id="pills-favorite-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-favorite"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-favorite"
+                    aria-selected="true"
+                  >
+                    Favorite
+                  </button>
+                </li>
+                <li
+                  class="nav-item w-50 d-flex justify-content-center align-items-center"
+                  role="presentation"
+                >
+                  <button
+                    class="chart__link"
+                    id="pills-purchased-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-purchased"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-purchased"
+                    aria-selected="false"
+                  >
+                    Purchased
+                  </button>
+                </li>
+              </ul>
+              <div class="element__tab">
+                <div class="tab-content" id="pills-tabContent5">
+                  <div
+                    class="tab-pane fade show active"
+                    id="pills-favorite"
+                    role="tabpanel"
+                    aria-labelledby="pills-favorite-tab"
+                  >
+                    <p class="favorite__par">
+                      Favorite your frequently use photo, svg, icon, uploaded
+                      files by clicking the <i class="fas fa-star"></i> icon in
+                      the tab
+                      <strong
+                        data-toggle="db-switch-to-data-panel"
+                        data-value="elements"
+                        >Element</strong
+                      >
+                    </p>
+                    <img
+                      src="images/favorite-empty-state.png"
+                      alt="favorite-empty-state"
+                      class="favorite__empty-img"
+                    />
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="pills-purchased"
+                    role="tabpanel"
+                    aria-labelledby="pills-purchased-tab"
+                  >
+                    ...
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-contentKits"
+              role="tabpanel"
+              aria-labelledby="v-pills-contentKits-tab"
+            >
+              <div class="element__tab">
+                <div class="input-group mb-3 element__form position-relative">
+                  <span class="input-group-text" id="basic-addon5"
+                    ><i class="fal fa-search"></i
+                  ></span>
+                  <input
+                    type="search"
+                    class="form-control element__search"
+                    placeholder="Search templates"
+                    aria-label="Username"
+                    aria-describedby="basic-addon2"
+                  />
+                </div>
+                <div class="content__title">
+                  <span class="palette-title">Content Kits</span>
+                </div>
+                <div class="chart__links">
+                  <a
+                    href="#"
+                    class="chart__link-img content__kits d-flex justify-content-center position-relative"
+                  >
+                    <img
+                      src="images/car__wash-brand.webp"
+                      alt="pattern__images"
+                    />
+                    <h3>Car Wash Brand</h3>
+                    <p><span>32 designs</span> on <span>24 doctypes</span></p>
+                  </a>
+                  <a
+                    href="#"
+                    class="chart__link-img content__kits d-flex justify-content-center align-items-center position-relative"
+                  >
+                    <img
+                      src="images/EOTY-certificate.webp"
+                      alt="pattern__images"
+                    />
+                    <h3>EOTY Certificate 1</h3>
+                    <p><span>5 designs</span> on <span>3 doctypes</span></p>
+                  </a>
+                  <a
+                    href="#"
+                    class="chart__link-img content__kits d-flex justify-content-center align-items-center position-relative"
+                  >
+                    <img
+                      src="images/new__year-party.webp"
+                      alt="pattern__images"
+                    />
+                    <h3>New year party</h3>
+                    <p><span>9 designs</span> on <span>6 doctypes</span></p>
+                  </a>
+                  <a
+                    href="#"
+                    class="chart__link-img content__kits d-flex justify-content-center align-items-center position-relative"
+                  >
+                    <img
+                      src="images/year__end-party2.webp"
+                      alt="pattern__images"
+                    />
+                    <h3>Year End Party 2</h3>
+                    <p><span>3 designs</span> on <span>2 doctypes</span></p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="instagram__story">
+            <span>
+              in <a href="#" class="instagram__link">Instagram Story</a></span
+            >
+            <a href="#"><i class="fal fa-arrow-up instagram__up"></i></a>
+          </div>
+          <div class="arrow-collapse">
+            <div class="ac-inner"><i class="fa fa-angle-left"></i></div>
+          </div>
+        </div>
+        <div class="col-lg-7 right__menu">
+          <div class="print__area">
+            <h2>Instagram story</h2>
+            <div class="d-flex">
+              <div class="white__list"></div>
+              <div class="toolbar d-flex flex-column h-100 align-items-center">
+                <a href="#" class="arrow__up text-decoration-none"
+                  ><i class="fal fa-arrow-up"></i>
+                  <span class="tooltip__up">Move up</span>
+                </a>
+                <a href="#" class="page__number text-decoration-none">1</a>
+                <a href="#" class="arrow__down text-decoration-none"
+                  ><i class="fal fa-arrow-down"></i>
+                  <span class="tooltip__down">Move down</span></a
+                >
+                <a href="#" class="duplicate text-decoration-none"
+                  ><i class="fal fa-clone"></i>
+                  <span class="tooltip__duplicate">Duplicate</span></a
+                >
+                <a href="#" class="copy__page text-decoration-none"
+                  ><i class="fal fa-copy"></i>
+                  <span class="tooltip__cloneTo">Clone to</span></a
+                >
+                <a
+                  href="#"
+                  class="delete__page text-decoration-none d-flex flex-column position-relative"
+                >
+                  <i class="fal fa-file"></i>
+                  <i class="far fa-trash-alt position-absolute"></i>
+                  <span class="tooltip__delete">Delete</span>
+                </a>
+              </div>
+            </div>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Button group with nested dropdown"
+            >
+              <button type="button" class="add__btn">
+                <i class="fal fa-plus"></i>Add new page
+              </button>
+              <div class="btn__group" role="group">
+                <button
+                  id="btnGroupDrop1"
+                  type="button"
+                  class="dropdown__btn dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="far fa-chevron-down dropdown__icon"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Facebook post <span>(940x788px)</span></a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Instagram Story <span>(1080x1920px)</span></a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Social media <span>(800x800px)</span></a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Instagram Post <span>(2048x2048px)</span></a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Choose another doctype</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tool__zoom">
+            <div class="view__fullscreen">
+              <a href="#" class="fullscreen"
+                ><i class="fal fa-expand-wide"></i
+              ></a>
+            </div>
+            <div class="separate"></div>
+            <div class="button__zoom-out">
+              <a href="#" class="zoom__out"
+                ><i class="fal fa-search-minus"></i
+              ></a>
+            </div>
+            <div class="zoom__percent">
+              <span class="percent">31.04%</span>
+            </div>
+            <div class="button__zoom-in">
+              <a href="#" class="zoom__in"
+                ><i class="fal fa-search-plus"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="lib/bootstrap.bundle.min.js "></script>
+    <script src="script.js "></script>
+  </body>
+</html>
